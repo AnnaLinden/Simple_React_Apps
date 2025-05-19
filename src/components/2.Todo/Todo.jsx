@@ -15,7 +15,7 @@ const Todo = () => {
 
   return (
     <section className='min-h-screen flex items-center justify-center bg-gray-100 px-4 py-10'>
-      <div className='w-full max-w-xl bg-white rounded-xl shadow-lg p-6 space-y-6'>
+      <div className='w-full max-w-md bg-white rounded-xl shadow-lg p-6 space-y-6'>
         <h1 className='text-2xl font-semibold text-indigo-600'>Todo List</h1>
         <div className='flex gap-2'>
           <input
