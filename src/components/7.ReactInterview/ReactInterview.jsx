@@ -136,35 +136,71 @@ const ReactInterview = () => {
         reactInterviewGlossary.length
     );
   };
-
   const handleNextClick = () => {
     setCurrentIndex((currentIndex + 1) % reactInterviewGlossary.length);
   };
-
   return (
-    <div className='flex justify-center items-center min-h-screen'>
-      <div className='bg-gray-200 p-6 rounded shadow max-w-md w-full space-y-4'>
-        <div className='text-xl font-bold'>
-          {reactInterviewGlossary[currentIndex].term}
-        </div>
-        <div>{reactInterviewGlossary[currentIndex].definition}</div>
-        <div className='flex justify-between'>
-          <button
-            onClick={handlePrevClick}
-            className='w-10 h-10 rounded-full bg-green-500 text-white hover:bg-green-600 transition flex items-center justify-center shadow'
-          >
-            <ChevronLeft className='w-5 h-5' />
-          </button>
-          <button
-            onClick={handleNextClick}
-            className='w-10 h-10 rounded-full bg-green-500 text-white hover:bg-green-600 transition flex items-center justify-center shadow'
-          >
-            <ChevronRight className='w-5 h-5' />
-          </button>
+    <>
+      <div className='flex  justify-center items-center min-h-screen'>
+        <div className='bg-gray-200 rounded shadow max-w-md w-full p-6 space-y-4'>
+          <div className='font-bold text-xl'>
+            {reactInterviewGlossary[currentIndex].term}
+          </div>
+          <div>{reactInterviewGlossary[currentIndex].definition}</div>
+          <div className='flex justify-between'>
+            <button
+              className='w-10 h-10 rounded-full bg-green-500 text-white hover:bg-green-600 transition flex items-center justify-center shadow'
+              onClick={handlePrevClick}
+            >
+              <ChevronLeft className='w-5 h-5' />
+            </button>
+            <button
+              onClick={handleNextClick}
+              className='w-10 h-10 rounded-full bg-green-500 text-white hover:bg-green-600 transition flex items-center justify-center shadow'
+            >
+              <ChevronRight className='w-5 h-5' />
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
+//   const handlePrevClick = () => {
+//     setCurrentIndex(
+//       (currentIndex + reactInterviewGlossary.length - 1) %
+//         reactInterviewGlossary.length
+//     );
+//   };
+
+//   const handleNextClick = () => {
+//     setCurrentIndex((currentIndex + 1) % reactInterviewGlossary.length);
+//   };
+
+//   return (
+//     <div className='flex justify-center items-center min-h-screen'>
+//       <div className='bg-gray-200 p-6 rounded shadow max-w-md w-full space-y-4'>
+//         <div className='text-xl font-bold'>
+//           {reactInterviewGlossary[currentIndex].term}
+//         </div>
+//         <div>{reactInterviewGlossary[currentIndex].definition}</div>
+//         <div className='flex justify-between'>
+//           <button
+//             onClick={handlePrevClick}
+//             className='w-10 h-10 rounded-full bg-green-500 text-white hover:bg-green-600 transition flex items-center justify-center shadow'
+//           >
+//             <ChevronLeft className='w-5 h-5' />
+//           </button>
+//           <button
+//             onClick={handleNextClick}
+//             className='w-10 h-10 rounded-full bg-green-500 text-white hover:bg-green-600 transition flex items-center justify-center shadow'
+//           >
+//             <ChevronRight className='w-5 h-5' />
+//           </button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
 export default ReactInterview;
