@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap");
+@import "tailwindcss";
 
 .font-outline {
   font-family: "Bungee Outline", cursive;
